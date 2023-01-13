@@ -8,7 +8,7 @@ const Example = () => {
 
   return (
     <>
-      <button className={`btn ${isSelected ? "selected" : ""}`} onClick={clickHandler}>
+      <button className={isSelected ? "btn selected" : "btn"} onClick={clickHandler}>
         ボタン
       </button>
       <div style={{ textAlign: "center" }}>
