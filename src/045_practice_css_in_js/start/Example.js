@@ -7,7 +7,17 @@ const FirstButton = styled.button`
   margin: 0.5rem 1rem;
   width: 11rem;
   border: none;
+  background: pink;
 `;
+
+const SecondButton = styled(FirstButton)`
+  background: red;
+  color: white;
+`
+
+const ThirdButton = styled(SecondButton)`
+  background: ${(props) => props.dark ? "black" : "green"};
+`
 
 const Example = () => {
   return (
@@ -28,6 +38,9 @@ const Example = () => {
         </ul>
       </p>
       <FirstButton>ボタン1</FirstButton>
+      <SecondButton>ボタン2</SecondButton>
+      <ThirdButton>ボタン3</ThirdButton>
+      <ThirdButton dark>ボタン3</ThirdButton>
     </>
   );
 };
